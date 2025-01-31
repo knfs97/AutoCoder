@@ -1,0 +1,13 @@
+name: Greeting Message
+on: [push]
+
+jobs:
+  show_greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with: 
+          repository: knfs97/AutoCoder
+          ref: main
+      - name: ShowGreeting
+        run: echo "Hello World"
